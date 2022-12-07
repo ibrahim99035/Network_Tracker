@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(61, 78, 92);
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ti{
+    font-size: 5rem;
+    box-sizing: border-box;
+}
+
+#fileLabel{
+    font-size: 2rem;
+    padding-bottom: 0.25rem;
+}
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+.mainPart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.file-input label {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #3d13b1, #32b47a);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+}
+
+input:hover + label,
+input:focus + label {
+  transform: scale(1.02);
+}
+
+input:focus + label {
+    outline: 1px solid #000;
+    outline: -webkit-focus-ring-color auto 2px;
+}
+
+.file-name {
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgb(231, 220, 220);
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.sub{
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #3d13b1, #32b47a);
+    box-shadow: 0 4px 7px rgba(53, 52, 52, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+}
+
+.sub:hover,
+.sub:focus{
+  transform: scale(1.02);
+}
+
+.sub:focus{
+    outline: 1px solid #000;
+    outline: -webkit-focus-ring-color auto 2px;
+}
+
+#kmlicon:hover{
+    box-sizing: border-box;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.847);
+    background-color: rgb(25, 114, 114);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+}
+.desc{
+    font-size: 1.25rem;
+    box-sizing: border-box;
+}
+
+#kmlname{
+    color: rgb(135, 191, 191);
+}

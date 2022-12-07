@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Tracker</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="ti">Network Tracker KML Generator</h1>
+        </div>
+    </header>
+    <div class="">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-input">
+                <p id="fileLabel">Chose the result file out from Wireshark (.pcap file)</p>
+                <div class="mainPart">
+                    <input 
+                        title="pcap" 
+                        type="file" 
+                        name="wireshark" 
+                        id="file" class="file"
+                    />
+                    <label for="file">Select .pcap File</label> <br> <br>
+                    <p class="file-name"></p>
+                </div>
+            </div>
+            <div class="mainPart">
+                <input type="submit" class="sub" value="Upload"/>
+            </div>                        
+        </form>
+    </div>
+    <div class="res">
+        {% if is_kml %}
+            <p class="desc">The name of your file is: <code id="kmlname">{{ kml }}</code></p>
+            <p class="desc">Download it</p>
+            <a href="{{ kml }}" download>
+                <img src="{% static 'Images/kml.png' %}" alt="download" srcset="" id="kmlicon">
+            </a>
+        {% endif %}
+    </div>
+    <script src="{% static 'JS/app.js' %}"></script>
+</body>
+</html>
